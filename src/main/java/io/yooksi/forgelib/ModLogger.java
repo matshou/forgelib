@@ -2,7 +2,6 @@ package io.yooksi.forgelib;
 
 import io.yooksi.commons.define.MethodsNotNull;
 import io.yooksi.commons.logger.CommonLogger;
-import net.minecraftforge.fml.common.Mod;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.core.Appender;
 import org.apache.logging.log4j.core.LoggerContext;
