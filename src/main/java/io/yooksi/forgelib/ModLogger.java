@@ -65,15 +65,12 @@ public class ModLogger extends CommonLogger {
         return DebugMode.mode != null && !DebugMode.is(DebugMode.UNKNOWN);
     }
 
-    public static ModLogger create(String modId) {
+    /**
+     * Create a new wrapped for Apache log4j logger.
+     */
+    public static ModLogger create(String modid) {
 
-        /*for (Annotation anno : modClass.getDeclaredAnnotations()) {
-            if (!anno.annotationType().getName().equals("net.minecraftforge.fml.common.Mod")) {
-                throw new IllegalStateException();
-            }
-        }*/
-
-        ModLogger logger = CommonLogger.create(modId, ModLogger.class);
+        ModLogger logger = CommonLogger.create(modid, ModLogger.class);
 
         if (DebugMode.init()) {
             /*
@@ -82,7 +79,7 @@ public class ModLogger extends CommonLogger {
              */
             if (DebugMode.is(DebugMode.VERBOSE))
             {
-                LoggerContext context = ((org.apache.logging.log4j.core.Logger) logger.get()).getContext();
+                LoggerContext context = ((org.apache.logging.log4j.core.Logger) logger.getLogger()).getContext();
                 LoggerConfig logConfig = context.getConfiguration().getRootLogger();
                 Appender consoleAppender = logConfig.getAppenders().get("Console");
                 logConfig.removeAppender("Console");
@@ -93,6 +90,7 @@ public class ModLogger extends CommonLogger {
         }
         return logger;
     }
+
     /** Print debug log to console and mod logfile */
     public void debug(String log) {
 
