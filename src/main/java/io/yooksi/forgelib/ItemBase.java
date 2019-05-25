@@ -3,6 +3,7 @@ package io.yooksi.forgelib;
 import io.yooksi.commons.define.MethodsNotNull;
 import io.yooksi.commons.logger.CommonLogger;
 import io.yooksi.commons.validator.BeanValidator;
+import io.yooksi.forgelib.logger.ForgeLibLogger;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 
@@ -14,7 +15,7 @@ public class ItemBase extends Item {
         setRegistryName(id);
         setTranslationKey(id);
         setCreativeTab(mod.getCreativeTab());
-        CommonLogger.get().debug("Created new item %s for mod %s", id, mod);
+        ForgeLibLogger.debug("Created new item %s for mod %s", id, mod);
     }
 
     /**
@@ -28,7 +29,7 @@ public class ItemBase extends Item {
     public static <T extends ItemBase> T construct(Class<T> itemClass, String name, ForgeMod mod) {
 
         ResourceLocation id = new ResourceLocation(mod.getModId(), name);
-        CommonLogger.get().debug("Constructing new item %s(%s) for mod %s", name, id, mod);
+        ForgeLibLogger.debug("Constructing new item %s(%s) for mod %s", name, id, mod);
 
         return BeanValidator.constructChild(ItemBase.class, itemClass, id.toString(), mod);
     }
