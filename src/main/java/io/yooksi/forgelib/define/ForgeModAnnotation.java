@@ -1,4 +1,4 @@
-package io.yooksi.forgelib;
+package io.yooksi.forgelib.define;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

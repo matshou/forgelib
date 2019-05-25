@@ -1,4 +1,6 @@
-package io.yooksi.forgelib;
+package io.yooksi.forgelib.define;
+
+import io.yooksi.forgelib.validator.RegistryNameValidator;
 
 import javax.annotation.Nonnull;
 import javax.annotation.meta.TypeQualifierNickname;

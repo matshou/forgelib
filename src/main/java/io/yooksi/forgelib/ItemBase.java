@@ -1,8 +1,8 @@
 package io.yooksi.forgelib;
 
 import io.yooksi.commons.define.MethodsNotNull;
-import io.yooksi.commons.logger.CommonLogger;
 import io.yooksi.commons.validator.BeanValidator;
+import io.yooksi.forgelib.define.ForgeRegIdentifier;
 import io.yooksi.forgelib.logger.ForgeLibLogger;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;

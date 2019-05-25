@@ -1,6 +1,7 @@
-package io.yooksi.forgelib;
+package io.yooksi.forgelib.validator;
 
 import io.yooksi.commons.util.AnnotationUtils;
+import io.yooksi.forgelib.define.ForgeRegIdentifier;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
