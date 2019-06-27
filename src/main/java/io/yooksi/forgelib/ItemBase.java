@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 
 @MethodsNotNull
+@SuppressWarnings("unused")
 public class ItemBase extends Item {
 
     public ItemBase(@ForgeRegIdentifier String id, ForgeMod mod) {

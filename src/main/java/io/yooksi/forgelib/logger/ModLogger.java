@@ -14,7 +14,7 @@ import org.apache.logging.log4j.spi.StandardLevel;
 @MethodsNotNull
 public class ModLogger extends CommonLogger {
 
-    private boolean debug;
+    private final boolean debug;
 
     public ModLogger(String logger, boolean dedicatedFile)
     {

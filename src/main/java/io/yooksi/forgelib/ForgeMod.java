@@ -6,6 +6,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.jetbrains.annotations.NotNull;
 
+import javax.annotation.Nonnull;
+
+@SuppressWarnings({"unused", "WeakerAccess"})
 public abstract class ForgeMod {
 
     private final CreativeTabs tab;
@@ -25,7 +28,7 @@ public abstract class ForgeMod {
         });
     }
 
-    public CreativeTabs getCreativeTab() {
+    public @Nonnull CreativeTabs getCreativeTab() {
         return tab;
     }
 
