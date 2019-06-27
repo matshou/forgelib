@@ -1,5 +1,6 @@
 package io.yooksi.forgelib.define;
 
+import io.yooksi.commons.define.LibraryAnnotation;
 import io.yooksi.forgelib.validator.RegistryNameValidator;
 
 import javax.annotation.Nonnull;
@@ -58,7 +59,7 @@ import java.util.regex.Pattern;
  * @see net.minecraft.util.ResourceLocation
  */
 @Documented
-@ForgeModAnnotation
+@LibraryAnnotation
 @TypeQualifierNickname @Nonnull
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.FIELD, ElementType.PARAMETER, ElementType.LOCAL_VARIABLE, ElementType.CONSTRUCTOR })
