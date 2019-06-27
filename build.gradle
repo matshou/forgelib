@@ -67,5 +67,5 @@ dependencies {
     // https://mvnrepository.com/artifact/org.jetbrains/annotations
     compile group: 'org.jetbrains', name: 'annotations', version: '17.0.0'
 
-    compile group: 'com.github.yooksi', name: 'commons', version:'v0.4.0-alpha'
+    compile group: 'com.github.yooksi', name: 'commons', version:'develop-SNAPSHOT'
 }
