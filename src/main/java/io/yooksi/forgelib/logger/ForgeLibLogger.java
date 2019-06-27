@@ -1,21 +1,20 @@
 package io.yooksi.forgelib.logger;
 
 import io.yooksi.commons.logger.CommonLogger;
+import io.yooksi.commons.logger.Log4jUtils;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Contract;
 
 /**
- * Internal {@code CommonLogger} wrapper class used by other
- * library classes and methods for their logging purposes.
- * Use the static methods provided here instead of creating
- * your own instance of {@code CommonLogger}.
+ * Internal {@code CommonLogger} wrapper class used by other library classes and methods for their logging purposes.
+ * Use the static methods provided here instead of creating your own instance of {@code CommonLogger}.
  */
 @SuppressWarnings("unused")
 public final class ForgeLibLogger {
 
-    private static final CommonLogger logger = new CommonLogger("ForgeLib",
-            Level.ALL, "forgelib", false, true);
+    private static final CommonLogger logger = new CommonLogger("ForgeLib", Level.ALL,
+            Log4jUtils.getStandardLogFilePath("forgelib"), false, true);
 
     /* Make the constructor private to disable instantiation */
     private ForgeLibLogger() {
