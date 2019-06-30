@@ -106,15 +106,35 @@ public enum TimeUnit {
 
     /**
      * Convert the given time duration for the current {@code TimeUnit} to system ticks.
+     * @return a representation of real ticks elapsed in the given time duration.
+     *         The value is rounded down to the largest {@code long} that is less
+     *         than or equal to the calculated value.
      */
-    public double toTicks(long duration) {
+    public long toTicks(long duration) {
+        return (long) Math.floor(ticks * duration);
+    }
+    /**
+     * Convert the given time duration for the current {@code TimeUnit} to fractional system ticks.
+     * Use this method when you require a more precise representation of elapsed ticks.
+     */
+    public double toFractionalTicks(long duration) {
         return ticks * duration;
     }
     /**
      * Convert the given time duration for the current {@code TimeUnit} to real-time seconds.
-     * The returned value is a {@code double} as a basis for manually measuring other units.
+     * @return a representation of real seconds elapsed in the given time duration.
+     *         The value is rounded down to the largest {@code long} that is less
+     *         than or equal to the calculated value.
      */
-    public double toRealSeconds(long duration) {
+    public long toRealSeconds(long duration) {
+        return Math.round(seconds * duration);
+    }
+    /**
+     * Convert the given time duration for the current {@code TimeUnit} to fractions of real-time seconds.
+     * The returned value is a {@code double} as a basis for manually measuring other units.
+     * Use this method when you require a more precise representation of elapsed ticks.
+     */
+    public double toRealFractionalSeconds(long duration) {
         return seconds * duration;
     }
 

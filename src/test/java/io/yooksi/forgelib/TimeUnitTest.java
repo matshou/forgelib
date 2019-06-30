@@ -12,12 +12,12 @@ public class TimeUnitTest {
     public void calculateMinecraftTimeToRealTimeTest() {
 
         Assertions.assertEquals(0.0138, MathUtils.truncateDecimals(
-                TimeUnit.SECONDS.toRealSeconds(1), 4));
+                TimeUnit.SECONDS.toRealFractionalSeconds(1), 4));
 
         Assertions.assertEquals(0.83, MathUtils.truncateDecimals(
-                TimeUnit.MINUTES.toRealSeconds(1), 2));
+                TimeUnit.MINUTES.toRealFractionalSeconds(1), 2));
 
-        Assertions.assertEquals(50, Math.round(TimeUnit.HOURS.toRealSeconds(1)));
+        Assertions.assertEquals(50, TimeUnit.HOURS.toRealSeconds(1));
         Assertions.assertEquals(20, TimeUnit.DAYS.toRealMinutes(1));
 
         // Translates to 2.33 hours
@@ -37,10 +37,10 @@ public class TimeUnitTest {
     public void calculateMinecraftTimeToTicksTest() {
 
         Assertions.assertEquals(0.27, MathUtils.truncateDecimals(
-                TimeUnit.SECONDS.toTicks(1), 2));
+                TimeUnit.SECONDS.toFractionalTicks(1), 2));
 
         Assertions.assertEquals(16.6, MathUtils.truncateDecimals(
-                TimeUnit.MINUTES.toTicks(1), 1));
+                TimeUnit.MINUTES.toFractionalTicks(1), 1));
 
         Assertions.assertEquals(1_000, TimeUnit.HOURS.toTicks(1));
         Assertions.assertEquals(24_000, TimeUnit.DAYS.toTicks(1));
