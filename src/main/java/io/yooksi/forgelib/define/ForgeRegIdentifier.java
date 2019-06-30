@@ -11,9 +11,10 @@ import java.lang.annotation.*;
 import java.util.regex.Pattern;
 
 /**
- * <p>Forge registry identifiers are used to create resource location objects that get stored
- * in each Forge registry entry when we register game objects such as items, blocks, recipes etc.</p>
- * To ensure compatibility and uniformity these names need to conform to Forge naming standards:</p>
+ * <p>
+ *     Forge registry identifiers are used to create resource location objects that get stored
+ *     in each Forge registry entry when we register game objects such as items, blocks, recipes etc.
+ *     To ensure compatibility and uniformity these names need to conform to Forge naming standards:
  * <ul>
  *     <li>Identifiers should <b>ALWAYS</b> represent a valid resource location,
  *     containing both the resource domain and path separated by a semicolon.</li>
@@ -27,7 +28,7 @@ import java.util.regex.Pattern;
  * In addition to these rules a Forge identifier used to register game objects <i>should</i>
  * be formatted according to the following set of conventions for better readability and easier maintenance:
  * <ul>
- *      <li>Identifier domain and path should always start with an alphabet letter.</b></li>
+ *      <li>Identifier domain and path should always start with an alphabet letter.</li>
  *      <li>Permitted special characters can only be used to separate words.</li>
  *      <li>Numbers should only be used as a domain or path segment suffix.</li>
  *      <li>However numbers <i>can</i> be used in word segments that were separated by special characters.</li>
