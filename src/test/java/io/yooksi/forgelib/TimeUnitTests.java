@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("WeakerAccess")
-public class TimeUnitTest {
+public class TimeUnitTests {
 
     @Test
     public void calculateMinecraftTimeToRealTimeTest() {
